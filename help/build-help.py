@@ -48,6 +48,14 @@ def build_help(output_path, clean=False):
                 sitemap.unlink()
                 print(f"Removed {f}")
 
+        # Remove lunr language files except English
+        lunr_dir = dest / "assets" / "javascripts" / "lunr" / "min"
+        if lunr_dir.exists():
+            for f in lunr_dir.iterdir():
+                if f.name != "lunr.en.min.js":
+                    f.unlink()
+                    print(f"Removed {f.name}")
+
    # Remove site/ directory
     shutil.rmtree(site_dir)
     print(f"Removed site/")

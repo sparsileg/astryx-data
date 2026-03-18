@@ -8,6 +8,7 @@ theme:
   name: material
   logo: logo-wo-ring.png
   favicon: logo-wo-ring.png
+  font: false
   palette:
     scheme: slate
     primary: black
@@ -15,13 +16,23 @@ theme:
   features:
     - navigation.instant
     - navigation.top
+    - navigation.expand
+    - navigation.footer
     - toc.integrate
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - navigation.sections
+    - navigation.indexes
 
 nav:
   - Home: index.md
-  - Target Database: target-database.md
   - Best Month Calculation: best-months.md
   - Yearly Observability: yearly-observability.md
+  - Target Database: target-database.md
 
 markdown_extensions:
   - tables
@@ -30,3 +41,25 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.critic
+  - pymdownx.arithmatex
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-]+'
+  - offline
+  - awesome-pages
+  - glightbox
