@@ -1,0 +1,32 @@
+site_name: Astryx Help
+site_description: Help documentation for Astryx astrophotography planning
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+
+theme:
+  name: material
+  logo: logo-wo-ring.png
+  favicon: logo-wo-ring.png
+  palette:
+    scheme: slate
+    primary: black
+    accent: deep purple
+  features:
+    - navigation.instant
+    - navigation.top
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Target Database: target-database.md
+  - Best Month Calculation: best-months.md
+  - Yearly Observability: yearly-observability.md
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
