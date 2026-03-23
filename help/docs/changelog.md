@@ -15,5 +15,6 @@ March 23, 2026
 - Fix CSS rendering problem on Sequence Planner chart background when
   switching themes. Issue 132.
 - Balance sequence planner chart margins. Issue 133.
+- Added additional optimization to Sequence Planner and fixed some bugs. Issues 134, 135.
 
   ---
