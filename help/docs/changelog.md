@@ -1,6 +1,6 @@
 # Astryx Change Log
 
-## Version 1.0.1
+## Version 1.1.0
 March 23, 2026
 
 - Link tutorials. Starting with **Getting Started**, each tutorial,
