@@ -33,6 +33,7 @@ nav:
   - Best Month Calculation: best-months.md
   - Yearly Observability: yearly-observability.md
   - Target Database: target-database.md
+  - Change Log: changelog.md
 
 markdown_extensions:
   - tables

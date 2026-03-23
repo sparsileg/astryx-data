@@ -79,7 +79,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--clean', '-c',
         action='store_true',
-        help='Remove sitemap files from output'
+        help='Remove sitemap and language files files from output'
     )
     args = parser.parse_args()
 

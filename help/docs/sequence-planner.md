@@ -40,6 +40,16 @@ session time. You can adjust individual target allocations using the
 sliders in the Target Allocation section — reducing one target's time
 increases the others proportionally.
 
+The last target's slider is capped at its natural end time — it cannot be
+extended past when the target sets below the minimum altitude or horizon or
+dawn arrives, whichever comes first.
+
+The total image count across all targets is displayed at the bottom of the
+Target Allocation card and updates as you adjust sliders or exposure times.
+
+The **Sequence Optimization** checkbox is also located at the bottom of the
+Target Allocation card. See the Sequence Optimization section below for details.
+
 Each target's net imaging time is its allocated time minus all overhead
 events that occur during its window.
 
@@ -94,7 +104,14 @@ are still accessible.
 
 When **Sequence Optimization** is enabled, the planner runs a second pass
 to find a better target order and boundary allocation than the default
-equal-split. The algorithm has two components:
+equal-split. The optimization uses a three-level priority:
+
+1. **Maximize total exposures** — the primary goal, never compromised
+2. **Minimize meridian flips** — preferred when total exposures are equal
+3. **Equalize image count** — distribute images as evenly as possible
+   across targets, allowing a small reduction in total exposures if needed
+
+The algorithm has two components:
 
 ### Pass 1: Permutation Search
 
@@ -130,19 +147,24 @@ so the next target begins with the telescope already on the correct side
 of the meridian. This can eliminate two flip overhead events with a single
 boundary adjustment.
 
-All three options are scored by total exposure count. The best result is
-kept.
+All three options are scored first by total exposure count, then by
+variance in image count across targets — lower variance means a more
+balanced distribution.
+
+After the best boundary position is found, a rebalancing sweep moves all
+target allocations simultaneously toward equal split in 1% steps, stopping
+if total exposures would drop below `bestSubs - (targets - 2)`. This allows
+a small sacrifice in total exposures — one sub for three targets, two for
+four — to achieve a more balanced result. The sweep runs even when no
+meridian flips are present, so equal distribution is always attempted.
 
 ### Acceptance Threshold
 
-The optimized result is only accepted if it improves total exposure count
-by at least **5%** over the baseline equal-allocation result. If the
-improvement is smaller than 5%, the original equal allocation is kept.
-This prevents the optimizer from accepting marginally better but
-unbalanced distributions — for example, giving one target very few
-exposures just to squeeze out one extra sub overall.
+The optimized result is accepted if it produces any improvement over the
+baseline equal-allocation result — even a single additional exposure. The
+threshold is set to zero, meaning no minimum improvement is required.
 
-The 5% threshold is configurable via `TRANSITION_OPTIMIZATION_THRESHOLD`
+The threshold is configurable via `TRANSITION_OPTIMIZATION_THRESHOLD`
 in `config.js`.
 
 ---
