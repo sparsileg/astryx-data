@@ -1,5 +1,14 @@
 # Astryx Change Log
 
+## Version 1.1.1
+March 25, 2026
+
+- Added a feedback email address (feedback@astryx.tools) to the About
+  view.
+- In Sequence Planner, removed the 'Cal' label that was associated with a
+  flip and just let the Cal event after the flip be the one that is
+  displayed.
+
 ## Version 1.1.0
 March 23, 2026
 
