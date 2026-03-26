@@ -4,10 +4,16 @@
 March 25, 2026
 
 - Added a feedback email address (feedback@astryx.tools) to the About
-  view.
+  view. #137.
 - In Sequence Planner, removed the 'Cal' label that was associated with a
   flip and just let the Cal event after the flip be the one that is
-  displayed.
+  displayed. #138
+- Fixed a few CSS/styling bugs with the To Do chart and Filter Targets
+  buttons. #139
+- Added a new flat theme with warm medium brown, cream text, and amber gold
+  accent colors. #140
+- Backup indicator at bottom of sidebar didn't collapse properly with the
+  sidebar. #141
 
 ## Version 1.1.0
 March 23, 2026
