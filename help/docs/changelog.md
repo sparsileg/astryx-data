@@ -1,5 +1,17 @@
 # Astryx Change Log
 
+## Version 1.2.0
+April 18, 2026
+
+- Fixed session analysis log parser to correctly exclude flat frame sessions
+  from analysis, resolving negative gap values and incorrect subs-per-dither
+  counts. Issue 144.
+- Replaced the single "Between Subs" session parameter with a learned algorithm
+  that automatically derives sub gap and dither duration from analyzed session
+  logs using an exponential moving average. The only user-settable parameter is
+  now "Frames per Dither" (0 = no dither). The sequence planner computes
+  between-sub overhead automatically from the learned values. Issue 145.
+
 ## Version 1.1.1
 March 25, 2026
 
