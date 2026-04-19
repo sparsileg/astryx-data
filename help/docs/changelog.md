@@ -11,6 +11,14 @@ April 18, 2026
   logs using an exponential moving average. The only user-settable parameter is
   now "Frames per Dither" (0 = no dither). The sequence planner computes
   between-sub overhead automatically from the learned values. Issue 145.
+- Added chart and list toggle to all three To Do List views (Type, Best Month,
+  Rise Time). The chart shows observable targets as a Gantt-style visibility
+  timeline with group label rows as separators. All views now show an imaging
+  status indicator (empty, half-filled, or filled circle) indicating whether
+  a target has no sessions, an active project, or a completed project in the
+  Imaging Log. Trailing commas removed from Type and Best Month list views.
+  Best Month "Not Observable" group renamed to "No Best Month Data". Issue
+  143.
 
 ## Version 1.1.1
 March 25, 2026
