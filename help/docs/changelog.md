@@ -11,6 +11,20 @@ June 17, 2026
   of list mode links. Issue 147.
 - Fixed Viewfinder not updating to the current target when navigating to
   the view after selecting a new target elsewhere in the app. Issue 148.
+- Added Start Tutorial and Resume Tutorial options to the system menu.
+  Resume Tutorial appears automatically when a tutorial is in progress
+  and updates immediately without requiring a page reload. Issue 150.
+- Internal: Added DBManager.close() and DBManager.deleteDatabase() methods
+  to properly abstract database lifecycle. Issues 149, 152.
+- Internal: Tutorial progress persistence moved to TutorialManager;
+  TutorialEngine no longer calls DBManager directly. Issue 150.
+- Internal: Best months batch writes now go through
+  DataManager.bulkUpdateTargets() instead of DBManager directly. Issue 151.
+- Internal: Database upgrade handlers reordered to ascending version
+  order. Issue 153.
+- Internal: BackupManager split into BackupManagerWeb and
+  BackupManagerTauri stub, selected at runtime, in preparation for
+  the Tauri desktop version. Issue 154.
 
 ## Version 1.2.0
 April 18, 2026
