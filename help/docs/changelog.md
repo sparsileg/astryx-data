@@ -1,5 +1,17 @@
 # Astryx Change Log
 
+## Version 1.3.0
+June 17, 2026
+
+- To Do List chart views now show an altitude graph inside each target's
+  visibility bar, displaying the target's altitude across the night on a
+  fixed 0–90° scale so curves are comparable across targets. Issue 147.
+- Clicking a bar in any To Do List chart view (Rise Time, Type, Best Month)
+  now selects that target and opens its detail view, matching the behavior
+  of list mode links. Issue 147.
+- Fixed Viewfinder not updating to the current target when navigating to
+  the view after selecting a new target elsewhere in the app. Issue 148.
+
 ## Version 1.2.0
 April 18, 2026
 
