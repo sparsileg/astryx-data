@@ -19,7 +19,7 @@ complete Messier catalog. This edit fixed the problem.
 == Asteroid Issues ==
 
 I added 13 asteroid targets, primarily so I could log Ceres. The catalog
-abbreviation is 'Ast' and the catalog is 'Asteroid'.
+abbreviation is 'MP and the catalog is 'Minor Planet'.
 
 == Star Issues ==
 
@@ -27,7 +27,7 @@ Redo the --no-sparse-stars, which I can't use anyway, to --to-stars,
 similar to the --to-extra option. This assigns the 1STAR, 2STAR, and ASTER
 types to the new Stars type in an attempt to reduce non-useful types but
 still keep the necessary objects in the database. The Common field will be
-updated to be "Single Star", "Doublle Star", "Asterism" for the current
+updated to be "Single Star", "Double Star", "Asterism" for the current
 1STAR, 2STAR, and ASTER types.
 
 == Exotic ==
