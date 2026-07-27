@@ -5,9 +5,10 @@ objects, plan imaging sessions, and maintain an imaging log.
 
 ## Help Topics
 
-- [Target Database](target-database.md) — Understanding the target database, statistics, and how to use filters effectively.
 - [Best Month Calculation](best-months.md) — How Astryx determines the best month to observe each target and what affects that calculation.
 - [Yearly Observability](yearly-observability.md) — How to read the yearly observability chart and use it to plan your imaging sessions.
+- [Combined Report](combined-session-report.md) — Exhaustive and helpful analysis, summary, and recommendations based on the ASIAir session and guiding logs.
+- [Target Database](target-database.md) — Understanding the target database, statistics, and how to use filters effectively.
 
 ## About Astryx
 
